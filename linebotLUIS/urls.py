@@ -34,7 +34,7 @@ urlpatterns = [
     url(r'^hello4/(\w+)/$', hello4),
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),
-    url(r'^index/(\w+)/$', index),
+    url(r'^index/$', index),
 ]
 
 # 2021.0320 合併2個API -- 
