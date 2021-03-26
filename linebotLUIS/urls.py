@@ -27,15 +27,14 @@ from django.conf.urls.static import static
 ########################################################
 
 urlpatterns = [
-#    url('^callback', views.callback),
+    url('^callback', views.callback),
     path('admin/', admin.site.urls),
     url(r'^$', views.sayhello),
     url(r'^hello3/(\w+)/$', views.hello3),
     url(r'^hello4/(\w+)/$', views.hello4),
     url(r'^fv/$', views.fv),		
     url(r'^fv2/$', views.fv2),
-    path('',views.index, name='index'),
-    path('',views.callback,name='callback'),
+
 ]
 
 # 2021.0320 合併2個API -- 
