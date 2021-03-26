@@ -15,8 +15,21 @@ from datetime import datetime
 from linebot.models import *
 ################################################################
 
-line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
-parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
+#~~~~~~~~~~2021. 修訂 加入 LINE Bot 專案(currency) 的資訊 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+"""
+line_bot_api = LineBotApi(settings.CHANNEL_ACCESS_TOKEN)
+parser  = WebhookParser(settings.LINE_CHANNEL_SECRET)
+
+"""
+app = Flask(__name__)
+
+# 必須放上自己的Channel Access Token
+line_bot_api = LineBotApi('17URPk56smrMsWCp7e912oZd81oLt9V54/XzaznpEi/zO5tPpacSIBG9LHVaczBdkg3yr082JtRH9P/jCVwQ1zjONXCtKBAXdZJPcwq7cstYc0fyACaO/0BI2qxkiaQi47L5anTlYck36ie8KK/kXAdB04t89/1O/w1cDnyilFU='
+# 必須放上自己的Channel Secret
+handler = WebhookHandler('7256e5990761221dad0a1047cb126934') #currency
+
+line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='已開啟Heroku連結'))
+##########################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##########
 
 @csrf_exempt
 def callback(request):
