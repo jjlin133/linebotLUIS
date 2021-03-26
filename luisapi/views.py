@@ -90,6 +90,6 @@ def fv2(request):
    return render(request,"E_8_1.html",locals()) 
 
 def index(request):
-    now=datetime.now()
-    username="匯率查詢專案" 
-    return render(request,"hello4.html",locals())
+   now=datetime.now()
+   username="匯率查詢專案" 
+   return render(request,"hello4.html",locals())
