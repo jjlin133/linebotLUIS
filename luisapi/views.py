@@ -16,7 +16,7 @@ from linebot.models import *
 ################################################################
 
 #~~~~~~~~~~2021. 修訂 加入 LINE Bot 專案(currency) 的資訊 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-
+import logging
 from flask import Flask
 from flask import request
 from flask import abort
@@ -88,3 +88,8 @@ def fv(request):
 # define fv2
 def fv2(request):
    return render(request,"E_8_1.html",locals()) 
+
+def index(request):
+    now=datetime.now()
+    username="匯率查詢專案" 
+    return render(request,"hello4.html",locals())
