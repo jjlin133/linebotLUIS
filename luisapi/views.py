@@ -11,9 +11,7 @@ from module import func
 # 2021.0324_增加的內容 
 #      ~~~ 來自 (GitHub Django 專案: firstproject\myapp\views.py)
 from django.shortcuts import render
-from django.http import HttpResponse
 from datetime import datetime
-from django.conf import settings
 from linebot.models import *
 ################################################################
 
@@ -51,6 +49,8 @@ def callback(request):
 ################################################################
 # 2021.0324__增加函式定義
 # Create your views here.
+################################################################
+
 # define sayhello
 def sayhello(request):
    return HttpResponse("Hello Django!")
