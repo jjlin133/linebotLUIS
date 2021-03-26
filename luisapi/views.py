@@ -68,7 +68,6 @@ def callback(request):
 def sayhello(request):
    return HttpResponse("Hello Django!")
 
-
 # define hello3
 def hello3(request,username):
    now=datetime.now()
