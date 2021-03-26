@@ -27,14 +27,15 @@ from luisapi.views import sayhello,hello3,hello4,fv,fv2,index
 ########################################################
 
 urlpatterns = [
-    url('^callback', views.callback),
+#    url('^callback', views.callback),
     path('admin/', admin.site.urls),
     url(r'^$', sayhello),
     url(r'^hello3/(\w+)/$', hello3),
     url(r'^hello4/(\w+)/$', hello4),
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),
-    path('', views.index, name='index'),
+    path('',views.index, name='index'),
+    path('',views.callback,name='callback'),
 ]
 
 # 2021.0320 合併2個API -- 
