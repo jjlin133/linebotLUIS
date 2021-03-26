@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from luisapi import views
+#from luisapi import views
 
 ########################################################
 ### 2021.0320 add import from ref :
@@ -34,8 +34,8 @@ urlpatterns = [
     url(r'^hello4/(\w+)/$', hello4),
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),
-    path('',views.index, name='index'),
-    path('',views.callback,name='callback'),
+    path('',index, name='index'),
+    path('',callback,name='callback'),
 ]
 
 # 2021.0320 合併2個API -- 
