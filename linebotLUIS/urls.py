@@ -27,7 +27,8 @@ from django.conf.urls.static import static
 ########################################################
 
 urlpatterns = [
-    url('^callback', views.callback),
+#    url('callback', views.callback),
+    url('callback',include('luisapi.urls'))
     path('admin/', admin.site.urls),
     url(r'^$', views.sayhello),
     url(r'^hello3/(\w+)/$', views.hello3),
