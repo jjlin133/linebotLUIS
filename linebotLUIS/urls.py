@@ -23,17 +23,18 @@ from luisapi import views
 #https://docs.djangoproject.com/en/2.0/howto/static-files/
 from django.conf import settings
 from django.conf.urls.static import static
-from luisapi.views import sayhello,hello3,hello4,fv,fv2
+from luisapi.views import sayhello,hello3,hello4,fv,fv2,index
 ########################################################
 
 urlpatterns = [
-#    url('^callback', views.callback),
+    url('^callback', views.callback),
     path('admin/', admin.site.urls),
-    url(r'^$', sayhello), 
-    url(r'^hello3/(\w+)/$', hello3), 
+    url(r'^$', sayhello),
+    url(r'^hello3/(\w+)/$', hello3),
     url(r'^hello4/(\w+)/$', hello4),
     url(r'^fv/$', fv),		
-    url(r'^fv2/$', fv2),	
+    url(r'^fv2/$', fv2),
+    url(r'^index/(\w+)/$', index),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 
 # 2021.0320 合併2個API -- 
