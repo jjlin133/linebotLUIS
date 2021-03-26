@@ -121,8 +121,10 @@ STATIC_ROOT = 'static'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [  #加入 static 路徑
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+#加入 static 路徑
+
