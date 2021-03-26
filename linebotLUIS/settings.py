@@ -15,12 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.abspath(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# LINE Bot 專案(
+# LINE Bot 專案(名稱 : currency  2021.3~2023.12)
 SECRET_KEY = 'Uaa63a3f5feff2725536db7d81f09c929'
 LINE_CHANNEL_ACCESS_TOKEN = '17URPk56smrMsWCp7e912oZd81oLt9V54/XzaznpEi/zO5tPpacSIBG9LHVaczBdkg3yr082JtRH9P/jCVwQ1zjONXCtKBAXdZJPcwq7cstYc0fyACaO/0BI2qxkiaQi47L5anTlYck36ie8KK/kXAdB04t89/1O/w1cDnyilFU='
 LINE_CHANNEL_SECRET = '7256e5990761221dad0a1047cb126934'
@@ -28,10 +27,8 @@ LINE_CHANNEL_SECRET = '7256e5990761221dad0a1047cb126934'
 #LINE_CHANNEL_SECRET = '你的 CHANNEL_SECRET'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
