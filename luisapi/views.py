@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
-from linebot.models import MessageEvent
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from module import func
 
 ################################################################
