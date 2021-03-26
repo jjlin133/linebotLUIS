@@ -16,21 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from luisapi import views
-
 ########################################################
 ### 2021.0320 add import from ref :
 #https://docs.djangoproject.com/en/2.0/howto/static-files/
 from django.conf import settings
 from django.conf.urls.static import static
-from luisapi.views import sayhello,hello3,hello4,fv,fv2
+from luisapi.views import callback,sayhello,hello3,hello4,fv,fv2
 ########################################################
 from django.contrib.staticfiles import views
 from django.urls import re_path
 
 
 urlpatterns = [
-    url('^callback', views.callback),
+    url('^callback', callback),
     path('admin/', admin.site.urls),
     url(r'^$', sayhello), 
     url(r'^hello3/(\w+)/$', hello3), 
