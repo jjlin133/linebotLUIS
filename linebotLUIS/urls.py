@@ -27,7 +27,7 @@ from luisapi.views import sayhello,hello3,hello4,fv,fv2
 ########################################################
 
 urlpatterns = [
-    url('^callback', views.callback),
+#    url('^callback', views.callback),
     path('admin/', admin.site.urls),
     url(r'^$', sayhello), 
     url(r'^hello3/(\w+)/$', hello3), 
