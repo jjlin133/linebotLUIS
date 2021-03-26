@@ -16,26 +16,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-#from luisapi import views
+from luisapi import views
 
 ########################################################
 ### 2021.0320 add import from ref :
 #https://docs.djangoproject.com/en/2.0/howto/static-files/
 from django.conf import settings
 from django.conf.urls.static import static
-from luisapi.views import sayhello,hello3,hello4,fv,fv2,index
+#from luisapi.views import sayhello,hello3,hello4,fv,fv2,index
 ########################################################
 
 urlpatterns = [
 #    url('^callback', views.callback),
     path('admin/', admin.site.urls),
-    url(r'^$', sayhello),
-    url(r'^hello3/(\w+)/$', hello3),
-    url(r'^hello4/(\w+)/$', hello4),
-    url(r'^fv/$', fv),		
-    url(r'^fv2/$', fv2),
-    path('',index, name='index'),
-    path('',callback,name='callback'),
+    url(r'^$', views.sayhello),
+    url(r'^hello3/(\w+)/$', views.hello3),
+    url(r'^hello4/(\w+)/$', views.hello4),
+    url(r'^fv/$', views.fv),		
+    url(r'^fv2/$', views.fv2),
+    path('',views.index, name='index'),
+    path('',views.callback,name='callback'),
 ]
 
 # 2021.0320 合併2個API -- 
