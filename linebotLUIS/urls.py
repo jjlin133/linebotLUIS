@@ -34,7 +34,7 @@ urlpatterns = [
     url(r'^hello4/(\w+)/$', hello4),
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),	
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 
 # 2021.0320 合併2個API -- 
 # (1)主軸 : Django GitHub 專案(linebotLUIS\luisapi 
