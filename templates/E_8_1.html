@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{% load static %}
+<link rel="stylesheet" href="{% static "fv/E_8_1.css" %}">
+<script type="text/javascript" src="{% static "fv/E_8_1.js" %}"></script>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<p>零存整付試算(期數:月)</p>
+<form id = "depositform">
+<p>每月存款金額(元)：</p>
+<input type="text" id="amount" name="amount" size="300" value="100"> <br>
+<p>年利率(%)：</p>
+<input type="text" id="rate" name="rate" value="3"><br>
+<p>期數(月)：</p>
+<input type="text" id="period" name="period" value="5"><br>
+<input type = "button" id = "deposittype" onclick="clubsavings()" value = "試算">
+<input type="reset">
+</form>
+<br>
+<pp id="FVIFA"></pp>
+<br><br>
+<pp id="result"></pp>
+</body>
+</html>
