@@ -16,11 +16,13 @@ from linebot.models import *
 ################################################################
 
 #~~~~~~~~~~2021. 修訂 加入 LINE Bot 專案(currency) 的資訊 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-"""
-line_bot_api = LineBotApi(settings.CHANNEL_ACCESS_TOKEN)
-parser  = WebhookParser(settings.LINE_CHANNEL_SECRET)
 
-"""
+from flask import Flask
+from flask import request
+from flask import abort
+
+logger = logging.getLogger("django")
+
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
