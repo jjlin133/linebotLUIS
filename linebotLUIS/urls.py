@@ -25,6 +25,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from luisapi.views import sayhello,hello3,hello4,fv,fv2
 ########################################################
+from django.contrib.staticfiles import views
+from django.urls import re_path
+
 
 urlpatterns = [
     url('^callback', views.callback),
@@ -35,6 +38,11 @@ urlpatterns = [
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),	
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+
+if settings.DEBUG:
+    urlpatterns += [
+        re_path(r'^static/(?P<path>.*)$', views.serve),
+    ]
 
 # 2021.0320 合併2個API -- 
 # (1)主軸 : Django GitHub 專案(linebotLUIS\luisapi 
