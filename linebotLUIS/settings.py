@@ -73,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'linebotLUIS.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -112,9 +111,7 @@ LANGUAGE_CODE = 'zh-Hant'
 TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 STATIC_ROOT = 'static'
