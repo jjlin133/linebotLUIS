@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^fv/$', fv),		
     url(r'^fv2/$', fv2),
     url(r'^index/(\w+)/$', index),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+]
 
 # 2021.0320 合併2個API -- 
 # (1)主軸 : Django GitHub 專案(linebotLUIS\luisapi 
